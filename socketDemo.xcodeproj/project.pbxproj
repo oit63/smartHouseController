@@ -12,7 +12,9 @@
 		B664F1661B697DE800845BBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B664F1651B697DE800845BBB /* ViewController.m */; };
 		B664F1691B697DE800845BBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B664F1671B697DE800845BBB /* Main.storyboard */; };
 		B664F16B1B697DE800845BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B664F16A1B697DE800845BBB /* Assets.xcassets */; };
-		B664F16E1B697DE800845BBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B664F16C1B697DE800845BBB /* LaunchScreen.storyboard */; };
+		B664F1791B69846300845BBB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B664F1781B69846300845BBB /* CFNetwork.framework */; };
+		B664F17E1B6985C400845BBB /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B664F17B1B6985C400845BBB /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B664F17F1B6985C400845BBB /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B664F17D1B6985C400845BBB /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,12 @@
 		B664F1651B697DE800845BBB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B664F1681B697DE800845BBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B664F16A1B697DE800845BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B664F16D1B697DE800845BBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B664F16F1B697DE800845BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B664F1781B69846300845BBB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B664F17A1B6985C400845BBB /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		B664F17B1B6985C400845BBB /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		B664F17C1B6985C400845BBB /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		B664F17D1B6985C400845BBB /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B664F1791B69846300845BBB /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,7 @@
 		B664F1521B697DE800845BBB = {
 			isa = PBXGroup;
 			children = (
+				B664F1781B69846300845BBB /* CFNetwork.framework */,
 				B664F15D1B697DE800845BBB /* socketDemo */,
 				B664F15C1B697DE800845BBB /* Products */,
 			);
@@ -58,13 +66,13 @@
 		B664F15D1B697DE800845BBB /* socketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E4F2BA3C1B6A2EE500B58333 /* Network */,
 				B664F1611B697DE800845BBB /* AppDelegate.h */,
 				B664F1621B697DE800845BBB /* AppDelegate.m */,
 				B664F1641B697DE800845BBB /* ViewController.h */,
 				B664F1651B697DE800845BBB /* ViewController.m */,
 				B664F1671B697DE800845BBB /* Main.storyboard */,
 				B664F16A1B697DE800845BBB /* Assets.xcassets */,
-				B664F16C1B697DE800845BBB /* LaunchScreen.storyboard */,
 				B664F16F1B697DE800845BBB /* Info.plist */,
 				B664F15E1B697DE800845BBB /* Supporting Files */,
 			);
@@ -77,6 +85,17 @@
 				B664F15F1B697DE800845BBB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4F2BA3C1B6A2EE500B58333 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B664F17A1B6985C400845BBB /* GCDAsyncSocket.h */,
+				B664F17B1B6985C400845BBB /* GCDAsyncSocket.m */,
+				B664F17C1B6985C400845BBB /* GCDAsyncUdpSocket.h */,
+				B664F17D1B6985C400845BBB /* GCDAsyncUdpSocket.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +155,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B664F16E1B697DE800845BBB /* LaunchScreen.storyboard in Resources */,
 				B664F16B1B697DE800845BBB /* Assets.xcassets in Resources */,
 				B664F1691B697DE800845BBB /* Main.storyboard in Resources */,
 			);
@@ -149,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B664F17E1B6985C400845BBB /* GCDAsyncSocket.m in Sources */,
+				B664F17F1B6985C400845BBB /* GCDAsyncUdpSocket.m in Sources */,
 				B664F1661B697DE800845BBB /* ViewController.m in Sources */,
 				B664F1631B697DE800845BBB /* AppDelegate.m in Sources */,
 				B664F1601B697DE800845BBB /* main.m in Sources */,
@@ -164,14 +184,6 @@
 				B664F1681B697DE800845BBB /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B664F16C1B697DE800845BBB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B664F16D1B697DE800845BBB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -262,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = socketDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foreheadtech.socketDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = socketDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foreheadtech.socketDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +312,7 @@
 				B664F1741B697DE800845BBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
